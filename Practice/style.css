@@ -1,0 +1,8 @@
+.mobile{
+    list-style: square;
+    font-size: 1.5rem;
+}
+.laptop{
+    list-style: circle;
+    font-size: 1.5rem;
+}
