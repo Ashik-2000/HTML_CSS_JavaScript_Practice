@@ -1,9 +1,12 @@
-let mobiles = document.getElementById("mobile");
-let laptops = document.getElementById("laptop");
-let items = document.querySelectorAll(".item:nth-child(2)");
+// let grandpa = document.querySelector('.mobile')
+let children = document.querySelector('.item')
+let parent = children.parentElement
+let grandpa = children.closest('.mobile')
 
-// items.style.color = 'red'
+console.log(parent)
+console.log(grandpa)
 
-for (let i = 0; i < items.length; i++){
-    items[i].style.color = 'red'
-}
+let childrenTwo = children.nextElementSibling
+let childrenOne = childrenTwo.previousElementSibling
+childrenTwo.style.color = 'red'
+childrenOne.style.color = 'red'
