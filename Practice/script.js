@@ -1,3 +1,5 @@
-let number = () => 10;
+let number = (x) => {
+    return x;
+};
     
-console.log(number())
+console.log(number(50))
