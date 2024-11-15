@@ -5,13 +5,13 @@ let doneTasks = document.querySelector('#doneTasks');
 
 let createTask = function (task) {
     let listItem = document.createElement('li');
-    let checkbox = document.createElement('input');
+    let checkBox = document.createElement('input');
     let label = document.createElement('label');
 
-    checkbox.type = 'checkbox';
     label.innerText = task;
+    checkBox.type = 'checkbox';
 
-    listItem.appendChild(checkbox);
+    listItem.appendChild(checkBox);
     listItem.appendChild(label);
 
     return listItem;
@@ -22,37 +22,38 @@ let addTask = function (event) {
     let listItem = createTask(input.value);
     dueTasks.appendChild(listItem);
     input.value = "";
-    clickCheckBox(listItem, completedTask);
+    clickCheckBox(listItem, completeTask);
 }
 
-let completedTask = function () {
+let completeTask = function () {
     let listItem = this.parentNode;
     let deleteBtn = document.createElement('button');
-    deleteBtn.innerText = 'Delete';
-    deleteBtn.className = 'deleteBtn';
+
+    deleteBtn.innerText = "Delete";
+    deleteBtn.className = "deleteBtn";
 
     listItem.appendChild(deleteBtn);
 
-    let checkbox = listItem.querySelector('input[type="checkbox"]');
-    checkbox.remove();
+    let checkBox = listItem.querySelector('input[type="checkbox"]');
+    checkBox.remove();
     doneTasks.appendChild(listItem);
-    clickDeleteBtn(listItem, deleteTask);
+
+    clickDeletebtn(listItem, deleteTask);
 }
 
-let deleteTask = function() {
+let deleteTask = function () {
     let listItem = this.parentNode;
     doneTasks.removeChild(listItem);
 }
 
-let clickCheckBox = function(listitem, completetask){
+let clickCheckBox = function (listitem, completetask) {
     let checkBox = listitem.querySelector('input[type="checkbox"]');
     checkBox.onchange = completetask;
 }
-let clickDeleteBtn = function(listitem, deletetask){
+
+let clickDeletebtn = function (listitem, deletetask) {
     let deleteBtn = listitem.querySelector('button');
     deleteBtn.onclick = deletetask;
 }
-
-
 
 form.addEventListener('submit', addTask);
