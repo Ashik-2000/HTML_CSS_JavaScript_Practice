@@ -8,12 +8,12 @@ const addTask = function(){
     task.innerText = input.value;
     taskContainer.appendChild(task);
     input.value = '';
-    task.addEventListener('click',() => {
+    task.addEventListener('click',function () {
         task.style.textDecoration = 'line-through';
+        completedTask.appendChild(task);
     });
     task.addEventListener('dblclick',function () {
         taskContainer.removeChild(task);
-        completedTask.appendChild(task);
     });
 }
 

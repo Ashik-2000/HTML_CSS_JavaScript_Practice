@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <h2>To Do List</h2>
@@ -15,12 +17,21 @@
         <div class="taskSection">
             <div class="taskContainer">
                 <h3>Tasks</h3>
+                <ul class="duetTasks">
+                    <li>
+                        <input type="checkbox"><label for="">Jogging</label>
+                    </li>
+                </ul>
             </div>
             <div class="completedTask">
                 <h3>Completed Task</h3>
+                <ul class="doneTasks">
+                    <li><label for="">Jogging</label><button class="deleteBtn">Delete</button></li>
+                </ul>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
+
 </html>
