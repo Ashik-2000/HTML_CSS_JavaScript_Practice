@@ -10,28 +10,27 @@
 
 <body>
     <div class="container">
-        <h2>To Do List</h2>
-        <div class="form">
-            <input type="text" class="inputField"><button class="addBtn">+</button>
-        </div>
+        <h1>To Do List</h1>
+        <form class="form">
+            <input type="text" class="inputField">
+            <input type="submit" value="Submit" id="addBtn">
+        </form>
         <div class="taskSection">
             <div class="taskContainer">
-                <h3>Tasks</h3>
-                <ul class="duetTasks">
-                    <li>
-                        <input type="checkbox"><label for="">Jogging</label>
-                    </li>
+                <h2>Incompleted Tasks</h2>
+                <ul class="ul" id="dueTasks">
+                    <!-- <li><input type="checkbox"><label for="">Jogging</label></li> -->
                 </ul>
             </div>
-            <div class="completedTask">
-                <h3>Completed Task</h3>
-                <ul class="doneTasks">
-                    <li><label for="">Jogging</label><button class="deleteBtn">Delete</button></li>
+            <div class="taskContainer">
+                <h2>Completed Task</h2>
+                <ul class="ul" id="doneTasks">
+                    <!-- <li><label for="">Jogging</label><button class="deleteBtn">Delete</button></li> -->
                 </ul>
             </div>
         </div>
     </div>
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 </body>
 
 </html>

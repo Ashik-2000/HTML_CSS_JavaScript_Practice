@@ -1,62 +1,107 @@
 *{
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    /* border: 1px dashed purple; */
+}
+
+/* ========== Typography ========== */
+
+label{
+    font-size: 1rem;
 }
 
 .container{
-    width: 500px;
-    margin: 10px auto;
     text-align: center;
-    border: 1px solid red;
 }
 
+h2{
+    color: #fff;
+}
+
+ul{
+    color: #fff;
+    text-align: left;
+}
+
+.deleteBtn{
+    color: #fff;
+}
+
+label{
+    font-size: 1.2rem;
+}
+
+/* ========== Layout ========== */
+.container{
+    border: 1px solid red;
+    background-color: #ff000044;
+    margin: 1em auto;
+    width: 700px;
+    padding: 1em;
+}
+
+/* ---------- form ---------- */
 
 .form{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5px;
+    width: 70%;
+    border: 1px solid green;
+    background-color: #00800077;
+    margin: 1em auto;
+    padding: 1em 0;
 }
 
-.taskSection{
-    display: flex;
-    justify-content: space-between;
-}
-
-.taskContainer, .completedTask{
-    width: 49%;
-    min-height: 100px;
-    margin: 10px 0;
-    text-align: left;
-    padding: 0 5px;
-    border: 1px dotted green;
-}
-
-.taskContainer>p{
-    color: purple;
-}
-
-.completedTask>p{
-    color: black;
-}
-
-h3{
-    border-bottom: 1px solid orange;
+#addBtn{
+    padding: 0 1em;
+    margin-left: 1em;
+    border: 1px solid #000000bb;
 }
 
 .inputField{
-    font-size: 1rem;
-    width: 75%;
-    height: 1.5em;
-    padding: 2px 5px;
+    border: 1px solid #000000bb;
+    padding: 0 5px;
 }
 
-.addBtn{
-    width: 20%;
-    font-size: 1rem;
+/* ---------- Task Section ---------- */
+
+.taskSection{
+    /* border: 1px solid purple;
+    background-color: #80008077; */
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-around;
 }
 
-p{
-    font-size: 1rem;
+.taskContainer{
+    border: 1px solid blue;
+    background-color: #0000ff77;
+    width: 45%;
+    padding: 0 0.5em;
+}
+
+h2{
+    border-bottom: 1px dashed yellow;
+    margin-bottom: 0.5em;
+}
+
+/* ---------- ul ---------- */
+
+ul{
+    list-style: none;
+}
+
+ul > li {
+    margin: 0.3em 0;
+}
+
+ul > li > input{
+    margin-right: 1em;
+}
+
+.deleteBtn{
+    padding: 0 0.5em;
+    background-color: red;
+    border: 1px solid #00000099;
+    border-radius: 50px;
+    margin-left: 2em;
 }

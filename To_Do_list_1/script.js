@@ -1,22 +1,28 @@
 let input = document.querySelector('.inputField');
-let btn = document.querySelector('.addBtn');
-let taskContainer = document.querySelector('.taskContainer');
-let completedTask = document.querySelector('.completedTask');
+let form = document.querySelector('form');
+let tasks = document.querySelector('#dueTasks');
+let completedTask = document.querySelector('#doneTasks');
 
-const addTask = function(){
-    var task = document.createElement('p');
-    task.innerText = input.value;
-    taskContainer.appendChild(task);
-    input.value = '';
-    task.addEventListener('click',function () {
-        task.style.textDecoration = 'line-through';
-        completedTask.appendChild(task);
-    });
-    task.addEventListener('dblclick',function () {
-        taskContainer.removeChild(task);
-    });
+let createTask = function(task){
+    let listItem = document.createElement('li');
+    let checkbox = document.createElement('input');
+    let label = document.createElement('label');
+
+    checkbox.type = 'checkbox';
+    label.innerText = task;
+
+    listItem.appendChild(checkbox);
+    listItem.appendChild(label);
+
+    return listItem;
+}
+
+let addTask = function(event){
+    event.preventDefault();
+    let listItem = createTask(input.value);
+    tasks.appendChild(listItem);
+    input.value = "";
 }
 
 
-
-btn.addEventListener('click', addTask);
+form.addEventListener('submit', addTask);
