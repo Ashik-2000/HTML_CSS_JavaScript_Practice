@@ -1,6 +1,15 @@
-let a = 10;
-let b = 20;
+let increaseBtn = document.querySelector('#increaseBtn');
+let decreaseBtn = document.querySelector('#decreaseBtn');
+let result = document.querySelector('.result');
 
-[b, a] = [a, b];
+let number = 0;
 
-// console.log(a, b);
+increaseBtn.addEventListener('click', function () {
+    number++;
+    result.textContent = number;
+})
+
+decreaseBtn.addEventListener('click', function () {
+    number--;
+    result.textContent = number;
+})
