@@ -1,15 +1,10 @@
-let increaseBtn = document.querySelector('#increaseBtn');
-let decreaseBtn = document.querySelector('#decreaseBtn');
-let result = document.querySelector('.result');
+let arr = [];
+increment = 0;
 
-let number = 0;
+let container = document.querySelector('.container');
 
-increaseBtn.addEventListener('click', function () {
-    number++;
-    result.textContent = number;
-})
+while(increment < 10000){
+    arr.push(++increment)
+}
 
-decreaseBtn.addEventListener('click', function () {
-    number--;
-    result.textContent = number;
-})
+container.innerHTML = arr.join('');
