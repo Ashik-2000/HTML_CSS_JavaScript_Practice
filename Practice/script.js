@@ -1,10 +1,11 @@
-let arr = [];
-increment = 0;
-
-let container = document.querySelector('.container');
-
-while(increment < 10000){
-    arr.push(++increment)
+function display(sum) {
+    console.log(sum);
 }
 
-container.innerHTML = arr.join('');
+function calculation(n1, n2, callback){
+    sum = n1 + n2;
+    if (callback) callback(sum);
+    return sum
+}
+
+console.log(calculation(15, 5, ))
