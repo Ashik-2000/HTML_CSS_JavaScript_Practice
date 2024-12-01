@@ -1,11 +1,36 @@
-function display(sum) {
-    console.log(sum);
+const payment = true;
+const marks = 70;
+
+function enroll(callback) {
+    console.log("Couse enrollment is in progress.");
+
+    setTimeout(() => {
+        if (payment) {
+            callback();
+        } else {
+            console.log("Payment Failed.")
+        }
+    }, 2000);
 }
 
-function calculation(n1, n2, callback){
-    sum = n1 + n2;
-    if (callback) callback(sum);
-    return sum
+function progress(callback) {
+    console.log("Course on progress...");
+    setTimeout(() => {
+        if (marks >= 80) {
+            callback();
+        } else {
+            console.log("You could not get enough marks to get the certificate.");
+        }
+    }, 3000);
 }
 
-console.log(calculation(15, 5, ))
+function getCertificate() {
+    console.log('Preparing your certificate.');
+    setTimeout(() => {
+        console.log('Congrats!!! you got the certificate.')
+    }, 1000);
+}
+
+enroll(function () {
+    progress(getCertificate);
+});
