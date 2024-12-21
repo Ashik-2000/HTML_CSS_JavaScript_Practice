@@ -1,6 +1,7 @@
-let x = 'Ashik'
-let y = 5
-let z = []
-console.log(typeof x)
-console.log(typeof y)
-console.log(typeof z)
+print()
+
+function print(){
+    console.log('This is function.')
+}
+
+console.log('This is console log.')
