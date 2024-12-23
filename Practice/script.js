@@ -1,3 +1,3 @@
-let a = '01234567890123456789'
-console.log(a.indexOf('1',3))
-console.log(a.lastIndexOf('1',11))
+let b = '01234567890123456789'
+let a = 'I love dogs and cats'
+console.log(a.startsWith('love',2))
