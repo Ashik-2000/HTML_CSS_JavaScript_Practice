@@ -1,2 +1,2 @@
-let a = 'Bangladesh'
-console.log(a.length)
+let a = '123456789'
+console.log(a.slice(3,7))
