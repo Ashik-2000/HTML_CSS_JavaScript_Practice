@@ -1,7 +1,2 @@
-print()
-
-function print(){
-    console.log('This is function.')
-}
-
-console.log('This is console log.')
+let a = 'Bangladesh'
+console.log(a.length)
