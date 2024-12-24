@@ -1,3 +1,4 @@
-let b = '01234567890123456789'
-let a = 'I love dogs and cats'
-console.log(a.startsWith('love',2))
+let a = 10
+let b = '10e-5'
+console.log(isNaN(a))
+console.log(isNaN(b))
