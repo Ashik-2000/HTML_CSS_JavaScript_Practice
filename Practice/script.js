@@ -1,4 +1,3 @@
-let a = 10+4987
-let b = a.toString()
+let fruits = ['apple', 'mango', 'orange', 'pineapple','banana']
 
-console.log(typeof b)
+fruits.forEach()
