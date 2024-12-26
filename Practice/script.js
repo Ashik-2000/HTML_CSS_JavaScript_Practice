@@ -1,3 +1,5 @@
 let fruits = ['apple', 'mango', 'orange', 'pineapple','banana']
 
-fruits.forEach()
+fruits.splice(2, 3, 'toyota', 'honda')
+
+console.log(fruits)
