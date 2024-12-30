@@ -1,1 +1,6 @@
-console.log(Math.floor(Math.random()* (61 - 50)+50));
+function generate(a,b){
+    return Math.floor(Math.random() * (b - a + 1)+a);
+}
+
+let n = generate(1, 6);
+console.log(n);
