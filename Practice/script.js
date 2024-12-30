@@ -1,6 +1,5 @@
-function generate(a,b){
-    return Math.floor(Math.random() * (b - a + 1)+a);
-}
+let roll = [4, 5, 6, 9, 7, 1, 2, 3]
 
-let n = generate(1, 6);
-console.log(n);
+console.log(roll.sort(function(a, b){
+    return b - a;
+}));
