@@ -34,20 +34,25 @@ function leapYear2(a) {
 
 console.log('My function');
 
-leapYear1(1988)
-leapYear1(1965)
-leapYear1("1988")
-leapYear1(321.4)
-leapYear1(2016)
-leapYear1(2064)
-leapYear1('fuck')
+leapYear1(1900);
+
 
 console.log('ChatGPT');
 
-leapYear2(1988)
-leapYear2(1965)
-leapYear2("1988")
-leapYear2(321.4)
-leapYear2(2016)
-leapYear2(2064)
-leapYear2('fuck')
+leapYear2(1900);
+
+let n = 1900;
+
+if (n % 4 ==0){
+    if (n % 100 == 0) {
+        console.log('Not LeapYear');
+    }
+    else if (n % 400 ==0){
+        console.log('LeapYear');
+        
+    }
+}
+else{
+    console.log('Not LeapYear');
+    
+}
