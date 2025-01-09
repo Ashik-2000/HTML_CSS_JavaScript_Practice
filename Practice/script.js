@@ -1,13 +1,13 @@
-const obj = {
-    name: 'Ashik',
-    age: 24,
-    gender: 'Male',
-    intro: function(){
-        return `Name is ${this.name}, age ${this.age} and gender ${this.gender}.`
+const person = {
+    fName: 'Ashik',
+    lName: 'Islam',
+    language: 'EN',
+    get len() {
+        return this.fName + ' language is '+ this.language;
+    },
+    name: function (){
+        return this.fName;
     }
 }
 
-obj.intro = obj.intro.toString();
-
-console.log(obj.intro);
-console.log(JSON.stringify(obj));
+console.log(person.len);
