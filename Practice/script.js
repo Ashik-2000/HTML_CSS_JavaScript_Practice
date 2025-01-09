@@ -10,4 +10,4 @@ const person = {
     }
 }
 
-console.log(person.len);
+console.log(person);
