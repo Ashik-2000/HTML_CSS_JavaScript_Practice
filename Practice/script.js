@@ -1,13 +1,4 @@
-const person = {
-    fName: 'Ashik',
-    lName: 'Islam',
-    language: 'EN',
-    get len() {
-        return this.fName + ' language is '+ this.language;
-    },
-    name: function (){
-        return this.fName;
-    }
-}
-
-console.log(person);
+(function printThis(){
+    console.log('This is a slef invoked function.');
+    
+})(); 
