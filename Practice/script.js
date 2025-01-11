@@ -5,8 +5,6 @@ function printThis(x, o){
     console.log(x);
     console.log(o.p);
     
-
-    
 }
 
 let obj = {
