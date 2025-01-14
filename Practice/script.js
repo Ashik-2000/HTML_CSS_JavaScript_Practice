@@ -1,4 +1,13 @@
-const personMethods = {
+function Person(name, age){
+    let person = Object.create(Person.prototype);
+
+    person.name = name;
+    person.age = age;
+
+    return person;
+}
+
+Person.prototype = {
     eat() {
         console.log('Person is eating');
     },
@@ -10,14 +19,7 @@ const personMethods = {
     },
 }
 
-function Person(name, age){
-    let person = Object.create(personMethods);
 
-    person.name = name;
-    person.age = age;
-
-    return person;
-}
 
 const sakib = Person("Sakib", 35);
 sakib.play();
