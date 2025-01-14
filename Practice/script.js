@@ -1,20 +1,19 @@
-function printThis(x, o){
-    x = x * 5;
-    o.p = 10;
+function Person(name, age){
+    let person = {};
 
-    console.log(x);
-    console.log(o.p);
-    
+    person.name = name;
+    person.age = age;
+
+    person.eat = function () {
+        console.log('Person is eating');
+    }
+
+    person.sleep = function () {
+        console.log('Person is sleeping');
+    }
+    return person;
 }
 
-let obj = {
-    p : 1,
-    q : 2
-}
+const sakib = Person("Sakib", 35);
+const tamim = Person ("Tamim", 25);
 
-let x = 5;
-
-printThis(x, obj);
-
-console.log(x);
-console.log(obj);
