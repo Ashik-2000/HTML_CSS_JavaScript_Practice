@@ -11,18 +11,16 @@ const personMethods = {
 }
 
 function Person(name, age){
-    let person = {};
+    let person = Object.create(personMethods);
 
     person.name = name;
     person.age = age;
 
-    person.eat = personMethods.eat;
-    person.sleep = personMethods.sleep;
-    person.play = personMethods.play;
-    
     return person;
 }
 
 const sakib = Person("Sakib", 35);
+sakib.play();
 const tamim = Person ("Tamim", 25);
+tamim.sleep();
 
