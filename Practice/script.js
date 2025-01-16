@@ -1,8 +1,9 @@
-let total = 0;
-let n = 10;
-
-for (let i = 1; i <= n; i++){
-    total += i;
+function sum(n){
+    let s = 0;
+    for (let i = 1; i <= n; i++ ){
+        s = s + i;
+    }
+    return s;
 }
 
-console.log(total);
+console.log(sum(10));
