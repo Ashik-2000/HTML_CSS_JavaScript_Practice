@@ -1,9 +1,21 @@
-function sum(n){
-    let s = 0;
-    for (let i = 1; i <= n; i++ ){
-        s = s + i;
+function curry(func){
+    return function curried(...args){
+        if(args.length >= func.length){
+            return func.apply(this, args);
+        }else{
+            return function(...args2){
+                return curried.apply(this, args.concat(args2)); 
+            }
+        }
     }
-    return s;
 }
 
-console.log(sum(10));
+function sum(a, b, c){
+    return a + b + c;
+}
+
+let curriedSum = curry(sum);
+
+console.log(curriedSum(1,2,3));
+console.log(curriedSum(1)(2,3));
+console.log(curriedSum(1)(2)(3));
